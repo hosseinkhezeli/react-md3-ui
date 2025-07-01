@@ -1,0 +1,58 @@
+.md3-btn-group {
+  display: inline-flex;
+  align-items: center;
+}
+
+.md3-btn-group[data-type='standard'] .md3-btn {
+  margin-inline: 4px;
+}
+
+.md3-btn-group[data-type='connected'] .md3-btn {
+  border-radius: 0;
+  margin: 0;
+}
+
+.md3-btn-group[data-type='connected'] .md3-btn:first-child {
+  border-start-start-radius: var(--btn-horizontal-radius);
+  border-end-start-radius: var(--btn-horizontal-radius);
+}
+
+.md3-btn-group[data-type='connected'] .md3-btn:last-child {
+  border-start-end-radius: var(--btn-horizontal-radius);
+  border-end-end-radius: var(--btn-horizontal-radius);
+}
+
+/* RTL support flips start/end automatically */
+
+/* Size overrides */
+.md3-btn-group[data-size='xs'] .md3-btn {
+  padding-inline: 18px;
+}
+.md3-btn-group[data-size='sm'] .md3-btn {
+  padding-inline: 12px;
+}
+.md3-btn-group[data-size='md'] .md3-btn,
+.md3-btn-group[data-size='lg'] .md3-btn,
+.md3-btn-group[data-size='xl'] .md3-btn {
+  padding-inline: 8px;
+}
+
+/* Ensure accessible touch target */
+.md3-btn-group .md3-btn {
+  min-width: 48px;
+  min-height: 48px;
+}
+
+/* Adjust horizontal radius per shape */
+.md3-btn-group[data-shape='round'] {
+  --btn-horizontal-radius: 24px;
+}
+.md3-btn-group[data-shape='square'] {
+  --btn-horizontal-radius: 4px;
+}
+
+/* Styling for selected state in connected type */
+.md3-btn-group[data-type='connected'] .md3-btn[data-state='selected'] {
+  z-index: 1;
+  position: relative;
+}

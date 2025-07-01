@@ -1,0 +1,219 @@
+/* Base Button Styles */
+.md3-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  height: var(--md3-btn-height, 40px);
+  margin: var(--md-spacing-xs);
+  gap: var(--md-spacing-sm);
+  outline: none;
+}
+
+/* Interaction states */
+.md3-btn:active {
+  transform: scale(0.95);
+}
+
+.md3-btn:disabled {
+  opacity: 0.7;
+  pointer-events: none;
+  filter: saturate(0) contrast(0.6);
+}
+
+.md3-btn:focus-visible {
+  outline: 2px solid var(--md-sys-color-inverse-surface, #6200ee);
+  outline-offset: 2px;
+}
+
+/* Loading indicator container misc */
+.loading-indicator-container {
+  overflow: hidden;
+  height: var(--md3-btn-icon-size, 40px);
+  width: var(--md3-btn-icon-size, 40px);
+}
+
+/* -------------------- */
+/* Variant Styles by data attribute */
+.md3-btn[data-variant='contained'] {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  fill: var(--md-sys-color-on-primary);
+}
+.md3-btn[data-variant='contained']:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.md3-btn[data-variant='outlined'] {
+  background-color: transparent;
+  color: var(--md-sys-color-primary);
+  fill: var(--md-sys-color-primary);
+  border: 1px solid var(--md-sys-color-primary);
+  outline: 1px solid transparent;
+}
+.md3-btn[data-variant='outlined']:hover:not(:disabled) {
+  outline-color: var(--md-sys-color-primary);
+  background-color: var(--md-sys-color-background);
+}
+
+.md3-btn[data-variant='elevated'] {
+  color: var(--md-sys-color-primary);
+  background-color: var(--md-sys-color-on-primary);
+  fill: var(--md-sys-color-primary);
+  box-shadow: var(--md-elevation-1);
+}
+.md3-btn[data-variant='elevated']:hover:not(:disabled) {
+  filter: brightness(0.9);
+}
+.md3-btn[data-variant='elevated']:disabled {
+  box-shadow: none;
+}
+
+.md3-btn[data-variant='text'] {
+  color: var(--md-sys-color-primary);
+  fill: var(--md-sys-color-primary);
+  background-color: transparent;
+}
+.md3-btn[data-variant='text']:hover:not(:disabled) {
+  filter: brightness(0.9);
+}
+
+.md3-btn[data-variant='tonal'] {
+  color: var(--md-sys-color-primary);
+  fill: var(--md-sys-color-primary);
+  background-color: var(--md-sys-color-primary-container);
+}
+.md3-btn[data-variant='tonal']:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+/* -------------------- */
+/* Size Tokens and Styling */
+.md3-btn[data-size='xs'] {
+  --md3-btn-height: 32px;
+  gap: var(--md-spacing-xs);
+  padding-inline: 12px;
+  --md3-btn-icon-size: 12px;
+}
+
+.md3-btn[data-size='sm'] {
+  --md3-btn-height: 40px;
+  gap: var(--md-spacing-sm);
+  padding-inline: var(--md-spacing-md);
+  --md3-btn-icon-size: 16px;
+}
+
+.md3-btn[data-size='md'] {
+  --md3-btn-height: 56px;
+  gap: var(--md-spacing-sm);
+  padding-inline: var(--md-spacing-lg);
+  --md3-btn-icon-size: 16px;
+}
+
+.md3-btn[data-size='lg'] {
+  --md3-btn-height: 96px;
+  gap: 12px;
+  padding-inline: var(--md-spacing-3xl);
+  --md3-btn-icon-size: 24px;
+}
+
+.md3-btn[data-size='xl'] {
+  --md3-btn-height: 136px;
+  gap: var(--md-spacing-md);
+  padding-inline: var(--md-spacing-4xl);
+  --md3-btn-icon-size: 36px;
+}
+
+/* -------------------- */
+/* Shape + size based border-radius using CSS variables */
+
+.md3-btn[data-shape='round'] {
+  border-radius: 9999px;
+}
+
+/* Define border-radius tokens for square shape + sizes */
+.md3-btn[data-shape='square'] {
+  --md3-btn-border-radius-xs: 12px;
+  --md3-btn-border-radius-sm: 12px;
+  --md3-btn-border-radius-md: 16px;
+  --md3-btn-border-radius-lg: 28px;
+  --md3-btn-border-radius-xl: 28px;
+}
+
+/* Apply the proper border-radius based on size for square shape */
+.md3-btn[data-shape='square'][data-size='xs'] {
+  border-radius: var(--md3-btn-border-radius-xs);
+}
+.md3-btn[data-shape='square'][data-size='sm'] {
+  border-radius: var(--md3-btn-border-radius-sm);
+}
+.md3-btn[data-shape='square'][data-size='md'] {
+  border-radius: var(--md3-btn-border-radius-md);
+}
+.md3-btn[data-shape='square'][data-size='lg'] {
+  border-radius: var(--md3-btn-border-radius-lg);
+}
+.md3-btn[data-shape='square'][data-size='xl'] {
+  border-radius: var(--md3-btn-border-radius-xl);
+}
+
+/* -------------------- */
+/* Selected / Unselected States */
+
+/* Selected state border-radius tokens */
+.md3-btn[data-state='selected'][data-size='xs'],
+.md3-btn[data-state='selected'][data-size='sm'] {
+  border-radius: 8px;
+}
+
+.md3-btn[data-state='selected'][data-size='md'] {
+  border-radius: 12px;
+}
+
+.md3-btn[data-state='selected'][data-size='lg'],
+.md3-btn[data-state='selected'][data-size='xl'] {
+  border-radius: 16px;
+}
+
+/* Unselected state overrides */
+.md3-btn[data-state='unselected'] {
+  border-radius: 80px;
+}
+
+/* Unselected + variant overrides */
+.md3-btn[data-variant='contained'][data-state='unselected'] {
+  color: var(--md-sys-color-primary);
+  background-color: var(--md-sys-color-on-primary);
+  fill: var(--md-sys-color-primary);
+}
+
+.md3-btn[data-variant='outlined'][data-state='selected'] {
+  background-color: var(--md-sys-color-surface-bright);
+  color: var(--md-sys-color-on-surface);
+  fill: var(--md-sys-color-on-surface);
+  border-color: var(--md-sys-color-on-surface);
+}
+
+.md3-btn[data-variant='tonal'][data-state='unselected'] {
+  filter: saturate(0);
+}
+
+/* -------------------- */
+/* Utility for text + fill color to reduce repetition */
+
+.md3-btn[data-variant='contained'],
+.md3-btn[data-variant='outlined'],
+.md3-btn[data-variant='elevated'],
+.md3-btn[data-variant='text'],
+.md3-btn[data-variant='tonal'] {
+  fill: currentColor;
+}
+
+/* Misc */
+.loading-indicator-container {
+  overflow: hidden;
+}

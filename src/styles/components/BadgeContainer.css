@@ -1,0 +1,33 @@
+.md3-badge-container {
+  position: relative;
+  display: inline-block;
+}
+
+.md3-badge {
+  position: absolute;
+  z-index: 1;
+}
+
+.md3-badge-container[data-position='top-end'] .md3-badge {
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.md3-badge-container--top-start .md3-badge {
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.md3-badge-container--bottom-end .md3-badge {
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%);
+}
+
+.md3-badge-container--bottom-start .md3-badge {
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%, 50%);
+}

@@ -1,0 +1,61 @@
+.theme-light {
+  /* Colors */
+  --md-sys-color-primary: #68548e;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #ebddff;
+  --md-sys-color-on-primary-container: #230f46;
+  --md-sys-color-primary-fixed: #ebddff;
+  --md-sys-color-primary-fixed-dim: #d3bcfd;
+  --md-sys-color-on-primary-fixed: #230f46;
+  --md-sys-color-on-primary-fixed-variant: #4f3d74;
+
+  --md-sys-color-secondary: #635b70;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #e9def8;
+  --md-sys-color-on-secondary-container: #1f182b;
+  --md-sys-color-secondary-fixed: #e9def8;
+  --md-sys-color-secondary-fixed-dim: #cdc2db;
+  --md-sys-color-on-secondary-fixed: #1f182b;
+  --md-sys-color-on-secondary-fixed-variant: #4b4358;
+
+  --md-sys-color-tertiary: #7e525d;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #ffd9e1;
+  --md-sys-color-on-tertiary-container: #31101b;
+  --md-sys-color-tertiary-fixed: #ffd9e1;
+  --md-sys-color-tertiary-fixed-dim: #f0b7c5;
+  --md-sys-color-on-tertiary-fixed: #31101b;
+  --md-sys-color-on-tertiary-fixed-variant: #643b46;
+
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #ffdad6;
+  --md-sys-color-on-error-container: #410002;
+
+  --md-sys-color-surface: #fef7ff;
+  --md-sys-color-surface-bright: #fbf7fc;
+  --md-sys-color-surface-dim: #ded8e0;
+
+  --md-sys-color-inverse-surface: #322f35;
+  --md-sys-color-inverse-on-surface: #f5eff7;
+  --md-sys-color-inverse-primary: #d3bcfd;
+
+  --md-sys-color-surf-container-lowest: #ffffff;
+  --md-sys-color-surf-container-low: #f8f1fa;
+  --md-sys-color-surf-container: #f2ecf4;
+  --md-sys-color-surf-container-high: #ede6ee;
+  --md-sys-color-surf-container-highest: #e7e0e8;
+
+  --md-sys-color-on-surface: #1d1b20;
+  --md-sys-color-on-surface-var: #49454e;
+
+  --md-sys-color-on-outline: #7a757f;
+  --md-sys-color-on-outline-var: #cbc4cf;
+
+  --md-sys-color-scrim: #000000;
+  --md-sys-color-shadow: #000000;
+
+  /* Elevation (shadows) */
+  --md-elevation-1: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  --md-elevation-2: 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
