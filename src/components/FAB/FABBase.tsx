@@ -9,9 +9,10 @@ export function FABBase({
   size = 'medium',
   ariaLabel,
   extended = false,
+  rounded,
   ...props
 }: FABBaseProps) {
-  const isExtended = extended && label;
+  const isExtended = Boolean(extended && label);
   const { a11yProps } = useFabA11y({ label, ariaLabel });
 
   return (
@@ -23,7 +24,10 @@ export function FABBase({
       data-lowered={lowered || undefined}
       data-extended={isExtended || undefined}
       type={props.type ?? 'button'}
-      className={`md3-fab ${props.className ?? ''}`.trim()}
+      {...(rounded && {
+        'data-rounded': true,
+      })}
+      className={`md3-fab ${props.className ?? ''}`}
     >
       <span className='md3-fab__icon'>{icon}</span>
       {isExtended && <span className='md3-fab__label'>{label}</span>}
